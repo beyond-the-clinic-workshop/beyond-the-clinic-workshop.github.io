@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beyond the Clinic: AI for Patient-Driven Health</title>
+  <meta name="description" content="A workshop on what health AI must get right when people collect, interpret, and act on their own data. Proposed for ICLR 2027 in San Francisco.">
+  <meta property="og:title" content="Beyond the Clinic: AI for Patient-Driven Health">
+  <meta property="og:description" content="What must health AI get right when people collect, interpret, and act on their own data? Proposed workshop at ICLR 2027, San Francisco.">
+  <meta property="og:image" content="img/sf.jpg">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================== NAV ============================== -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top">Beyond the Clinic</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Menu</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="nav-links" id="nav-links" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#cfp">Call for Papers</a>
+        <a href="#dates">Dates</a>
+        <a href="#program">Program</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#organizers">Organizers</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================== HERO ==============================
+       Drop a landscape San Francisco photo at img/sf.jpg (about 2400 px wide).
+       Until it exists, the hero falls back to a plain gradient. -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <p class="kicker">Proposed workshop &middot; ICLR 2027</p>
+      <h1>Beyond the Clinic</h1>
+      <p class="subtitle">AI for Patient-Driven Health</p>
+      <p class="tagline">
+        Patients are increasingly managing their health outside of the clinic, where AI now
+        interacts with people directly. We ask what health AI must get right when people collect,
+        interpret, and act on their own data.
+      </p>
+      <ul class="hero-meta">
+        <li>San Francisco</li>
+        <li>April 29&ndash;30, 2027 <span class="muted-light">(day TBA)</span></li>
+        <li>In person</li>
+      </ul>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#cfp">Call for papers</a>
+        <a class="btn btn-ghost" href="#dates">Important dates</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="eyebrow">About</p>
+        <h2>Most health happens outside the clinic</h2>
+        <div class="prose">
+          <p>
+            Health AI has largely been built around clinical workflows, which supply measurement
+            protocols, curated labels, and a professional who reviews outputs before anyone acts on
+            them. Yet most health is managed outside the clinic, where people increasingly collect
+            their own data, read their own records, and interpret results alone or with AI.
+          </p>
+          <p>
+            We call this <em>patient-driven health</em>: health decisions initiated and steered by the
+            individual, whether or not a clinician is involved. Foundation models are already trained
+            on wearable data from millions of individuals, and one chatbot fields health questions
+            from over 230 million people a week.
+          </p>
+          <p>
+            This workshop asks what AI must get right in this setting, and how the data people
+            collect can in turn advance science where clinical research has lagged. Through a debate,
+            roundtables, and panels spanning AI, clinical, and patient perspectives, we aim to lay
+            methodological groundwork for health AI that people can safely act on.
+          </p>
+        </div>
+
+        <dl class="stats">
+          <div class="stat">
+            <dt>&lt;&thinsp;1 in 5</dt>
+            <dd>people in the US contact a physician in an average month</dd>
+            <dd class="cite">Johansen &amp; Richardson, 2019</dd>
+          </div>
+          <div class="stat">
+            <dt>~4 in 5</dt>
+            <dd>experience some discomfort, illness, or injury in that same month</dd>
+            <dd class="cite">Green et al., 2001</dd>
+          </div>
+          <div class="stat">
+            <dt>1 in 3</dt>
+            <dd>US adults used AI for health information in the past year</dd>
+            <dd class="cite">KFF, 2026</dd>
+          </div>
+          <div class="stat">
+            <dt>0 of 1.6M</dt>
+            <dd>day-long wearable windows in one corpus were complete</dd>
+            <dd class="cite">Xu et al., 2025</dd>
+          </div>
+        </dl>
+
+        <h3 class="subhead">Three levels of patient-driven health</h3>
+        <div class="levels">
+          <article class="level">
+            <span class="level-num">1</span>
+            <h4>Detect</h4>
+            <p>Spotting elevated risk or undiagnosed disease, such as glucose spikes into
+              prediabetic ranges in people whom standard tests classify as normal.</p>
+          </article>
+          <article class="level">
+            <span class="level-num">2</span>
+            <h4>Manage</h4>
+            <p>Managing known risks and chronic conditions day to day, from diabetes to tracking
+              cycles to understand symptoms.</p>
+          </article>
+          <article class="level">
+            <span class="level-num">3</span>
+            <h4>Improve</h4>
+            <p>Improving health and wellness without a known risk or condition, from sleep and
+              fitness to athletic performance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CALL FOR PAPERS ============================== -->
+    <section class="section section-tint" id="cfp">
+      <div class="container">
+        <p class="eyebrow">Call for papers</p>
+        <h2>Open problems</h2>
+        <p class="lead">
+          We invite submissions on methods, data, evaluation, and applications for AI that people use
+          to understand and act on their own health. Topics include, but are not limited to:
+        </p>
+
+        <div class="topics">
+          <article class="topic">
+            <span class="topic-num">01</span>
+            <h3>Translating between population evidence and individual experience</h3>
+            <p class="topic-q">How should models weigh population evidence against a person&rsquo;s
+              own data, and how can personal data build new population evidence?</p>
+            <ul>
+              <li>Adapting population knowledge to individuals</li>
+              <li>The reference class problem when individuals were not represented in the study population</li>
+              <li>Personalization from small samples and the risk of overfitting to the individual</li>
+              <li>N-of-1 designs and individual causal inference</li>
+              <li>Pooling patient-generated data to build new population evidence</li>
+              <li>Personal baselines that change over time: online and test-time adaptation</li>
+            </ul>
+          </article>
+
+          <article class="topic">
+            <span class="topic-num">02</span>
+            <h3>Learning from personal health data</h3>
+            <p class="topic-q">How can models learn reliably from data that are incomplete, noisy,
+              and self-selected?</p>
+            <ul>
+              <li>Foundation models and self-supervised learning for wearable and multimodal data</li>
+              <li>Reasoning over heterogeneous personal records, from medical records to wearable and self-reported data</li>
+              <li>Learning without curated labels and evaluation without per-person ground truth</li>
+              <li>Informative missingness and measurement without protocol</li>
+              <li>Robustness to differences in devices, sensors, and firmware</li>
+              <li>Data self-selection and performance across subgroups</li>
+            </ul>
+          </article>
+
+          <article class="topic">
+            <span class="topic-num">03</span>
+            <h3>Adaptive interventions and sequential decision-making</h3>
+            <p class="topic-q">How can systems learn to act for an individual safely and
+              effectively, when every intervention changes the behavior and data they learn from?</p>
+            <ul>
+              <li>Methods for adaptive and closed-loop interventions</li>
+              <li>Just-in-time adaptive interventions and micro-randomized trials</li>
+              <li>Feedback loops between interventions, behavior, and data</li>
+              <li>Off-policy and counterfactual evaluation of adaptive systems</li>
+              <li>Online personalization and test-time adaptation</li>
+              <li>Optimization with long-term, delayed, and proxy outcomes</li>
+              <li>Safe exploration and constrained decision-making</li>
+            </ul>
+          </article>
+
+          <article class="topic">
+            <span class="topic-num">04</span>
+            <h3>Human&ndash;AI interaction and safety</h3>
+            <p class="topic-q">How can AI help people understand and act on their health
+              information safely, without a professional in the loop?</p>
+            <ul>
+              <li>Evaluating LLMs&rsquo; ability to interpret and synthesize patient-provided records, lab results, and clinical notes</li>
+              <li>Uncertainty quantification and out-of-distribution detection for knowing when not to answer</li>
+              <li>Active information seeking in response to patient-driven prompting</li>
+              <li>Measuring and mitigating over-reliance on models and model sycophancy</li>
+              <li>Identifying and mitigating harmful outputs and misuse</li>
+              <li>Designing outputs robust to misinterpretation by non-experts</li>
+              <li>Patient privacy and data protection</li>
+              <li>Evaluating outcomes rather than outputs: human&ndash;AI team performance, user studies and trials, person-defined endpoints</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="callout">
+          We especially welcome submissions from application areas such as
+          <strong>women&rsquo;s health</strong>, <strong>mental health</strong>, and
+          <strong>sports performance</strong>.
+        </p>
+
+        <h3 class="subhead">Submission tracks</h3>
+        <div class="tracks">
+          <article class="track">
+            <p class="track-pages">Up to 2 pages</p>
+            <h4>Tiny papers</h4>
+            <p>Early findings and late-breaking developments that would benefit most from
+              discussion: a simple idea implemented and evaluated for the first time, a small
+              self-contained theoretical result, or a new perspective on an existing paper.</p>
+            <p class="track-note">The five top-rated tiny papers give three-minute lightning talks
+              before the first poster session.</p>
+          </article>
+          <article class="track">
+            <p class="track-pages">Up to 4 pages</p>
+            <h4>Long papers</h4>
+            <p>More developed, unpublished work, such as new methods, datasets, benchmarks, or
+              empirical studies.</p>
+            <p class="track-note">Five are selected for five-minute spotlight talks before the
+              second poster session.</p>
+          </article>
+        </div>
+
+        <ul class="policies">
+          <li>Submissions and reviewing run on <strong>OpenReview</strong> (link to be announced).</li>
+          <li>Work previously published at another venue, including the ICLR 2027 main track, will not be accepted.</li>
+          <li>Accepted papers will be hosted on OpenReview and on this website.</li>
+          <li>We follow the ICLR 2027 policies on large language model usage.</li>
+          <!-- TODO: state archival vs. non-archival once decided. -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== DATES ============================== -->
+    <section class="section" id="dates">
+      <div class="container narrow">
+        <p class="eyebrow">Important dates</p>
+        <h2>Timeline</h2>
+        <p class="muted">Tentative. All deadlines are Anywhere on Earth (AoE).</p>
+        <ol class="timeline">
+          <li><time datetime="2026-12-15">15 Dec 2026</time><span>Call for papers opens</span></li>
+          <li class="key"><time datetime="2027-02-01">1 Feb 2027</time><span>Submission deadline</span></li>
+          <li><time datetime="2027-02-26">26 Feb 2027</time><span>Author notification; accepted papers public on OpenReview</span></li>
+          <li><time datetime="2027-03-10">10 Mar 2027</time><span>Camera-ready deadline and public program with talk titles</span></li>
+          <li class="key"><time datetime="2027-04-29">29&ndash;30 Apr 2027</time><span>Workshop in San Francisco (exact day TBA)</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================== PROGRAM ============================== -->
+    <section class="section section-tint" id="program">
+      <div class="container">
+        <p class="eyebrow">Program</p>
+        <h2>An interactive day</h2>
+        <p class="lead">
+          Beyond the invited talks, the day centers on roundtables, panels, and a debate, with
+          dedicated audience Q&amp;A in every session.
+        </p>
+
+        <div class="formats">
+          <article class="format">
+            <h3>Roundtables</h3>
+            <p>Speakers, panelists, organizers, and attendees talk freely in small groups under the
+              <em>Chatham House Rule</em>. An organizer at each table collects the questions that drew
+              the most interest, and the moderators put the strongest ones to the stage, so a question
+              you would hesitate to ask in front of the full room can still be heard.</p>
+          </article>
+          <article class="format">
+            <h3>Live-vote debate</h3>
+            <p>Attendees vote for or against the motion from their phones before the opening
+              statements and can switch sides at any point. The running count stays on screen, and
+              the side that gains the most ground by the closing vote wins.</p>
+          </article>
+          <article class="format">
+            <h3>Expert panels</h3>
+            <p>Panels bring ML developers, clinicians, and patient advocates into the same
+              conversation, each with dedicated audience Q&amp;A.</p>
+          </article>
+          <article class="format">
+            <h3>Talks into posters</h3>
+            <p>Contributed lightning and spotlight talks lead straight into the two poster sessions,
+              so discussion continues at the posters.</p>
+          </article>
+        </div>
+
+        <h3 class="subhead">Tentative schedule</h3>
+        <div class="table-wrap">
+          <table class="schedule">
+            <thead>
+              <tr><th scope="col">Time</th><th scope="col">Session</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>09:00&ndash;09:10</td><td>Opening remarks</td></tr>
+              <tr><td>09:10&ndash;09:50</td><td>Expert panel I <span class="detail">30 min moderated + 10 min audience Q&amp;A</span></td></tr>
+              <tr><td>09:50&ndash;10:25</td><td>Invited talk I</td></tr>
+              <tr><td>10:25&ndash;10:40</td><td>Lightning talks: selected tiny papers <span class="detail">questions at the posters</span></td></tr>
+              <tr class="break"><td>10:40&ndash;11:40</td><td>Coffee and poster session I</td></tr>
+              <tr><td>11:40&ndash;12:10</td><td>Roundtables</td></tr>
+              <tr class="break"><td>12:10&ndash;13:10</td><td>Lunch</td></tr>
+              <tr><td>13:10&ndash;13:40</td><td>Debate <span class="detail">audience votes live; 20 min debate + 10 min Q&amp;A</span></td></tr>
+              <tr><td>13:40&ndash;14:15</td><td>Invited talk II</td></tr>
+              <tr class="break"><td>14:15&ndash;15:15</td><td>Coffee and poster session II</td></tr>
+              <tr><td>15:15&ndash;15:55</td><td>Expert panel II <span class="detail">30 min moderated + 10 min audience Q&amp;A</span></td></tr>
+              <tr><td>15:55&ndash;16:35</td><td>Keynote talk III</td></tr>
+              <tr><td>16:50&ndash;17:00</td><td>Awards and closing remarks</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== SPEAKERS ==============================
+         To add a headshot, replace <div class="avatar">AB</div> with
+         <img class="avatar" src="img/people/name.jpg" alt="">  (square, ~400 px). -->
+    <section class="section" id="speakers">
+      <div class="container">
+        <p class="eyebrow">Speakers</p>
+        <h2>Invited speakers</h2>
+        <div class="people">
+          <article class="person">
+            <div class="avatar">YY</div>
+            <h3>Yuzhe Yang</h3>
+            <p class="affil">UCLA</p>
+            <p class="area">Foundation models for wearable sensor data; AI biomarkers for disease</p>
+          </article>
+          <article class="person">
+            <div class="avatar">SM</div>
+            <h3>Susan Murphy</h3>
+            <p class="affil">Harvard University</p>
+          </article>
+          <article class="person">
+            <div class="avatar">DR</div>
+            <h3>Deborah Raji</h3>
+            <p class="affil"><!-- TODO affiliation --></p>
+          </article>
+        </div>
+
+        <h2 class="h2-follow">Panelists and debaters</h2>
+        <div class="people">
+          <article class="person">
+            <div class="avatar">IS</div>
+            <h3>Ida Sim</h3>
+            <p class="affil">UCSF</p>
+          </article>
+          <article class="person">
+            <div class="avatar">HC</div>
+            <h3>Hugo Campos</h3>
+            <p class="affil">Patient advocate</p>
+          </article>
+          <article class="person">
+            <div class="avatar">MS</div>
+            <h3>Matt Springham</h3>
+            <p class="affil">Google Health &middot; Arsenal FC</p>
+            <p class="area">Physical performance, load, and fatigue monitoring in elite football</p>
+          </article>
+          <article class="person">
+            <div class="avatar">AM</div>
+            <h3>Andy Miller</h3>
+            <p class="affil"><!-- TODO affiliation --></p>
+          </article>
+          <article class="person">
+            <div class="avatar">JF</div>
+            <h3>Joe Futoma</h3>
+            <p class="affil"><!-- TODO affiliation --></p>
+          </article>
+          <article class="person">
+            <div class="avatar">YP</div>
+            <h3>Yojan Patel</h3>
+            <p class="affil"><!-- TODO affiliation --></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== ORGANIZERS ==============================
+         Copy one <article class="person"> block per organizer. -->
+    <section class="section section-tint" id="organizers">
+      <div class="container">
+        <p class="eyebrow">Organizers</p>
+        <h2>Organizing committee</h2>
+        <div class="people">
+          <article class="person">
+            <div class="avatar">HL</div>
+            <h3>Hongzhou Luan</h3>
+            <p class="affil">UC Berkeley &amp; UCSF</p>
+          </article>
+          <article class="person">
+            <div class="avatar">MX</div>
+            <h3>Maxwell Xu</h3>
+            <p class="affil"><!-- TODO affiliation --></p>
+          </article>
+        </div>
+
+        <div class="contact">
+          <h3>Contact</h3>
+          <p>Questions about the workshop? Email
+            <a href="mailto:hluan@berkeley.edu">hluan@berkeley.edu</a>.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p><strong>Beyond the Clinic: AI for Patient-Driven Health</strong><br>
+        Proposed workshop at ICLR 2027, San Francisco.</p>
+      <p class="credit">
+        Header photo by <a href="https://unsplash.com/photos/gZXx8lKAb7Y">Maarten van den Heuvel</a> on Unsplash
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
