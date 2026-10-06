@@ -91,11 +91,10 @@ p { margin: 0 0 1em; }
   /* Shown only if the photo is missing. */
   background: radial-gradient(120% 90% at 80% 10%, #1e40af 0%, #172554 45%, #0f172a 100%);
 }
-/* Photo layer, slightly boosted in color. No overlay; the text sits on a frosted-glass panel. */
+/* Photo layer, shown as-is. No overlay; the text sits on a frosted-glass panel. */
 .hero::before {
   content: ""; position: absolute; inset: 0; z-index: -1;
   background: url("../img/sf.jpg") center / cover no-repeat;
-  filter: saturate(1.25) contrast(1.06);
 }
 .hero-inner {
   /* On wide screens, sits halfway between the page edge and the centered content column. */
@@ -105,8 +104,8 @@ p { margin: 0 0 1em; }
 .hero-card {
   max-width: 660px; padding: 34px 36px 32px; border-radius: 18px;
   background: rgba(255, 255, 255, .72);
-  -webkit-backdrop-filter: blur(24px) saturate(1.4);
-  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, .7);
   box-shadow: 0 12px 40px rgba(15, 23, 42, .18);
 }
