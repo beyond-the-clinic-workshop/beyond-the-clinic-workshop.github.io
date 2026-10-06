@@ -1,18 +1,10 @@
-// Solid nav once the hero scrolls away; simple mobile menu toggle.
+// Mobile menu toggle.
 (function () {
-  var nav = document.getElementById("nav");
   var toggle = document.getElementById("nav-toggle");
   var links = document.getElementById("nav-links");
 
-  function onScroll() {
-    nav.classList.toggle("solid", window.scrollY > 40);
-  }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-
   function setMenu(open) {
     links.classList.toggle("open", open);
-    nav.classList.toggle("menu-open", open);
     toggle.setAttribute("aria-expanded", String(open));
   }
   toggle.addEventListener("click", function () {

@@ -6,8 +6,9 @@ GitHub Pages.
 ```
 index.html        all page content, one commented block per section
 css/style.css     styling (colors are variables at the top)
-js/main.js        sticky nav and mobile menu
-img/sf.jpg        hero photo (add this; the hero falls back to a gradient without it)
+js/main.js        mobile menu toggle
+img/sf.jpg        hero photo, full-resolution original (wide screens)
+img/sf-small.jpg  1600 px copy of the hero photo (phones and tablets, social previews)
 img/favicon.svg   browser-tab icon
 ```
 
@@ -21,8 +22,8 @@ Then open http://localhost:8000.
 
 ## Editing
 
-- **Hero photo:** save a landscape photo (about 2400 px wide, under ~500 KB) as `img/sf.jpg`, and
-  put its credit in the `<p class="credit">` line in the footer.
+- **Hero photo:** `img/sf.jpg` is the original Unsplash download; `img/sf-small.jpg` is a 1600 px
+  copy used below 820 px wide. Replace both if you change the photo, and update the footer credit.
 - **People:** copy an `<article class="person">` block. To add a headshot, replace
   `<div class="avatar">AB</div>` with `<img class="avatar" src="img/people/name.jpg" alt="">`
   (square images work best).

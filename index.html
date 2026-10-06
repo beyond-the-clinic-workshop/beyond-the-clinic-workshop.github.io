@@ -7,7 +7,7 @@
   <meta name="description" content="A workshop on what health AI must get right when people collect, interpret, and act on their own data. Proposed for ICLR 2027 in San Francisco.">
   <meta property="og:title" content="Beyond the Clinic: AI for Patient-Driven Health">
   <meta property="og:description" content="What must health AI get right when people collect, interpret, and act on their own data? Proposed workshop at ICLR 2027, San Francisco.">
-  <meta property="og:image" content="img/sf.jpg">
+  <meta property="og:image" content="https://beyond-the-clinic-workshop.github.io/img/sf-small.jpg">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,10 +36,12 @@
   </header>
 
   <!-- ============================== HERO ==============================
-       Drop a landscape San Francisco photo at img/sf.jpg (about 2400 px wide).
-       Until it exists, the hero falls back to a plain gradient. -->
+       Hero photo: img/sf.jpg (full-resolution original) on wide screens, img/sf-small.jpg (1600 px) on phones/tablets.
+       Until it exists, the hero falls back to a plain gradient. The text sits on a solid
+       panel so the photo itself needs no darkening overlay. -->
   <section class="hero" id="top">
     <div class="hero-inner">
+      <div class="hero-card">
       <p class="kicker">Proposed workshop &middot; ICLR 2027</p>
       <h1>Beyond the Clinic</h1>
       <p class="subtitle">AI for Patient-Driven Health</p>
@@ -56,6 +58,7 @@
       <div class="hero-actions">
         <a class="btn btn-primary" href="#cfp">Call for papers</a>
         <a class="btn btn-ghost" href="#dates">Important dates</a>
+      </div>
       </div>
     </div>
   </section>
@@ -306,19 +309,119 @@
               <tr><th scope="col">Time</th><th scope="col">Session</th></tr>
             </thead>
             <tbody>
-              <tr><td>09:00&ndash;09:10</td><td>Opening remarks</td></tr>
-              <tr><td>09:10&ndash;09:50</td><td>Expert panel I <span class="detail">30 min moderated + 10 min audience Q&amp;A</span></td></tr>
-              <tr><td>09:50&ndash;10:25</td><td>Invited talk I</td></tr>
-              <tr><td>10:25&ndash;10:40</td><td>Lightning talks: selected tiny papers <span class="detail">questions at the posters</span></td></tr>
-              <tr class="break"><td>10:40&ndash;11:40</td><td>Coffee and poster session I</td></tr>
-              <tr><td>11:40&ndash;12:10</td><td>Roundtables</td></tr>
-              <tr class="break"><td>12:10&ndash;13:10</td><td>Lunch</td></tr>
-              <tr><td>13:10&ndash;13:40</td><td>Debate <span class="detail">audience votes live; 20 min debate + 10 min Q&amp;A</span></td></tr>
-              <tr><td>13:40&ndash;14:15</td><td>Invited talk II</td></tr>
-              <tr class="break"><td>14:15&ndash;15:15</td><td>Coffee and poster session II</td></tr>
-              <tr><td>15:15&ndash;15:55</td><td>Expert panel II <span class="detail">30 min moderated + 10 min audience Q&amp;A</span></td></tr>
-              <tr><td>15:55&ndash;16:35</td><td>Keynote talk III</td></tr>
-              <tr><td>16:50&ndash;17:00</td><td>Awards and closing remarks</td></tr>
+              <tr>
+                <td>09:00&ndash;09:10</td>
+                <td>
+                  <span class="session">Opening remarks</span>
+                  <span class="detail">Organizers</span>
+                </td>
+              </tr>
+              <tr>
+                <td>09:10&ndash;09:50</td>
+                <td>
+                  <span class="session">Panel discussion</span>
+                  <span class="detail">30 min moderated + 10 min audience Q&amp;A</span>
+                  <ul class="who">
+                    <li><strong>Ida Sim</strong> UCSF &middot; Clinician</li>
+                    <li><strong>Hugo Campos</strong> Research Partner &middot; Patient advocate</li>
+                    <li class="tba">ML developer to be announced</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>09:50&ndash;10:25</td>
+                <td>
+                  <span class="session">Invited talk</span>
+                  <span class="detail">25 min + 10 min Q&amp;A</span>
+                  <ul class="who">
+                    <li><strong>Yuzhe Yang</strong> UCLA &middot; Foundation models for wearable sensor data; AI biomarkers for disease</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>10:25&ndash;10:40</td>
+                <td>
+                  <span class="session">Spotlight introductions: selected papers</span>
+                  <span class="detail">5 &times; 3 min; questions at the posters</span>
+                </td>
+              </tr>
+              <tr class="break">
+                <td>10:40&ndash;11:40</td>
+                <td>
+                  <span class="session">Coffee and poster session I</span>
+                  <span class="detail">Accepted papers</span>
+                </td>
+              </tr>
+              <tr>
+                <td>11:40&ndash;12:10</td>
+                <td>
+                  <span class="session">Roundtables: Real-world patient-driven health</span>
+                  <span class="detail">Speakers, panelists, organizers, and attendees; Chatham House Rule</span>
+                </td>
+              </tr>
+              <tr class="break">
+                <td>12:10&ndash;13:10</td>
+                <td>
+                  <span class="session">Lunch</span>
+                </td>
+              </tr>
+              <tr>
+                <td>13:10&ndash;13:40</td>
+                <td>
+                  <span class="session">Debate</span>
+                  <span class="detail">Audience votes live; 20 min debate + 10 min Q&amp;A</span>
+                  <ul class="who">
+                    <li><strong>Joe Futoma</strong> Oura &middot; Staff ML Data Scientist</li>
+                    <li><strong>Julian Hong</strong> UCSF &middot; Clinician</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>13:40&ndash;14:15</td>
+                <td>
+                  <span class="session">Invited talk</span>
+                  <span class="detail">25 min + 10 min Q&amp;A</span>
+                  <ul class="who">
+                    <li><strong>Deborah Raji</strong> UC Berkeley &middot; Health AI safety</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="break">
+                <td>14:15&ndash;15:15</td>
+                <td>
+                  <span class="session">Coffee and poster session II</span>
+                  <span class="detail">Accepted papers</span>
+                </td>
+              </tr>
+              <tr>
+                <td>15:15&ndash;15:55</td>
+                <td>
+                  <span class="session">Panel discussion</span>
+                  <span class="detail">30 min moderated + 10 min audience Q&amp;A</span>
+                  <ul class="who">
+                    <li><strong>Andy Miller</strong> Apple &middot; Research Scientist</li>
+                    <li><strong>Yojan Patel</strong> Google &middot; Research Lead</li>
+                    <li><strong>Matt Springham</strong> Google Health; Arsenal FC &middot; Physical performance</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>15:55&ndash;16:35</td>
+                <td>
+                  <span class="session">Keynote talk</span>
+                  <span class="detail">30 min + 10 min Q&amp;A</span>
+                  <ul class="who">
+                    <li><strong>Susan Murphy</strong> Harvard University &middot; Adaptive interventions</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>16:50&ndash;17:00</td>
+                <td>
+                  <span class="session">Awards and closing remarks</span>
+                  <span class="detail">Organizers</span>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -343,11 +446,13 @@
             <div class="avatar">SM</div>
             <h3>Susan Murphy</h3>
             <p class="affil">Harvard University</p>
+            <p class="area">Adaptive interventions</p>
           </article>
           <article class="person">
             <div class="avatar">DR</div>
             <h3>Deborah Raji</h3>
-            <p class="affil"><!-- TODO affiliation --></p>
+            <p class="affil">UC Berkeley</p>
+            <p class="area">Health AI safety</p>
           </article>
         </div>
 
@@ -357,32 +462,43 @@
             <div class="avatar">IS</div>
             <h3>Ida Sim</h3>
             <p class="affil">UCSF</p>
+            <p class="area">Clinician</p>
           </article>
           <article class="person">
             <div class="avatar">HC</div>
             <h3>Hugo Campos</h3>
-            <p class="affil">Patient advocate</p>
+            <p class="affil">Research Partner</p>
+            <p class="area">Patient advocate</p>
+          </article>
+          <article class="person">
+            <div class="avatar">JF</div>
+            <h3>Joe Futoma</h3>
+            <p class="affil">Oura</p>
+            <p class="area">Staff ML Data Scientist</p>
+          </article>
+          <article class="person">
+            <div class="avatar">JH</div>
+            <h3>Julian Hong</h3>
+            <p class="affil">UCSF</p>
+            <p class="area">Clinician</p>
+          </article>
+          <article class="person">
+            <div class="avatar">AM</div>
+            <h3>Andy Miller</h3>
+            <p class="affil">Apple</p>
+            <p class="area">Research Scientist</p>
+          </article>
+          <article class="person">
+            <div class="avatar">YP</div>
+            <h3>Yojan Patel</h3>
+            <p class="affil">Google</p>
+            <p class="area">Research Lead</p>
           </article>
           <article class="person">
             <div class="avatar">MS</div>
             <h3>Matt Springham</h3>
             <p class="affil">Google Health &middot; Arsenal FC</p>
-            <p class="area">Physical performance, load, and fatigue monitoring in elite football</p>
-          </article>
-          <article class="person">
-            <div class="avatar">AM</div>
-            <h3>Andy Miller</h3>
-            <p class="affil"><!-- TODO affiliation --></p>
-          </article>
-          <article class="person">
-            <div class="avatar">JF</div>
-            <h3>Joe Futoma</h3>
-            <p class="affil"><!-- TODO affiliation --></p>
-          </article>
-          <article class="person">
-            <div class="avatar">YP</div>
-            <h3>Yojan Patel</h3>
-            <p class="affil"><!-- TODO affiliation --></p>
+            <p class="area">Physical performance</p>
           </article>
         </div>
       </div>
