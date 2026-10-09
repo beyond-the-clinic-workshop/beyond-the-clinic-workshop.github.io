@@ -175,7 +175,7 @@ h2 { font-size: clamp(28px, 3.6vw, 38px); font-weight: 700; letter-spacing: -.02
 /* ------------------------------ Stats ------------------------------ */
 
 .stats {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
   margin: 56px 0 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
 }
 .stat { padding: 28px 22px 26px; border-left: 1px solid var(--line); }
@@ -204,7 +204,7 @@ h2 { font-size: clamp(28px, 3.6vw, 38px); font-weight: 700; letter-spacing: -.02
 
 /* ------------------------------ Topics ------------------------------ */
 
-.topics { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 36px; }
+.topics { display: grid; grid-template-columns: 1fr; gap: 22px; margin-top: 36px; }
 .topic {
   position: relative;
   background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
@@ -215,11 +215,13 @@ h2 { font-size: clamp(28px, 3.6vw, 38px); font-weight: 700; letter-spacing: -.02
   letter-spacing: .08em; font-variant-numeric: tabular-nums;
 }
 .topic h3 { font-size: 19px; margin: 6px 0 12px; }
-.topic-q { color: var(--muted); font-style: italic; font-size: 16px; }
-.topic ul { margin: 0 0 12px; padding-left: 0; list-style: none; }
+.topic-q { color: var(--muted); font-style: italic; font-size: 16px; max-width: 860px; }
+.topic ul { margin: 8px 0 12px; padding-left: 0; list-style: none; columns: 2 340px; column-gap: 40px; }
 .topic li {
-  position: relative; padding-left: 20px; margin-bottom: 7px; font-size: 15.5px; line-height: 1.5;
+  position: relative; padding-left: 20px; margin-bottom: 10px; font-size: 15.5px; line-height: 1.5;
+  break-inside: avoid;
 }
+.topic li strong { font-weight: 600; }
 .topic li::before {
   content: ""; position: absolute; left: 2px; top: .62em;
   width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
@@ -313,7 +315,12 @@ h2 { font-size: clamp(28px, 3.6vw, 38px); font-weight: 700; letter-spacing: -.02
   font-size: 34px; font-weight: 600; letter-spacing: -.02em; color: var(--accent-strong);
   background: var(--accent-soft);
 }
+.person .role {
+  font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 4px;
+}
 .person h3 { font-size: 17px; margin-bottom: 4px; }
+.people-follow { margin-top: 40px; }
 .affil { color: var(--ink-soft); font-size: 15.5px; margin-bottom: 6px; }
 .area { color: var(--muted); font-size: 14px; line-height: 1.45; max-width: 240px; margin: 0 auto; }
 
@@ -335,12 +342,6 @@ h2 { font-size: clamp(28px, 3.6vw, 38px); font-weight: 700; letter-spacing: -.02
 
 /* ------------------------------ Responsive ------------------------------ */
 
-@media (max-width: 980px) {
-  .stats { grid-template-columns: repeat(2, 1fr); }
-  .stat:nth-child(3) { border-left: 0; padding-left: 0; }
-  .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
-}
-
 @media (max-width: 820px) {
   .nav-toggle { display: block; }
   .nav-links {
@@ -356,7 +357,7 @@ h2 { font-size: clamp(28px, 3.6vw, 38px); font-weight: 700; letter-spacing: -.02
 
   .hero::before { background-image: url("../img/sf-small.jpg"); background-position: 30% center; }
 
-  .topics, .tracks, .levels { grid-template-columns: 1fr; }
+  .tracks, .levels { grid-template-columns: 1fr; }
   .section { padding: 72px 0; }
 }
 
@@ -382,8 +383,14 @@ h2 { font-size: clamp(28px, 3.6vw, 38px); font-weight: 700; letter-spacing: -.02
   .stat dt { font-size: 32px; }
   .topic, .track { padding: 24px 22px 14px; }
   .timeline li { grid-template-columns: 1fr; gap: 2px; }
-  .schedule td, .schedule th { padding: 12px 14px; }
-  .schedule td:first-child { width: auto; }
+  .schedule thead { display: none; }
+  .schedule tr, .schedule td { display: block; }
+  .schedule tr { border-bottom: 1px solid var(--line); padding: 12px 16px; }
+  .schedule tr:last-child { border-bottom: 0; }
+  .schedule td { padding: 0; border: 0; }
+  .schedule td:first-child { width: auto; font-size: 14px; margin-bottom: 2px; }
+  .schedule tr.break { background: #f8fafc; }
+  .schedule tr.break td { background: none; }
   .people { grid-template-columns: repeat(2, 1fr); gap: 28px 14px; }
   .avatar { width: 104px; height: 104px; font-size: 28px; }
 }

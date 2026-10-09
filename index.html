@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Beyond the Clinic: AI for Patient-Driven Health</title>
-  <meta name="description" content="A workshop on what health AI must get right when people collect, interpret, and act on their own data. Proposed for ICLR 2027 in San Francisco.">
+  <meta name="description" content="A workshop on AI for patient-driven health: learning from personal health data, adaptive interventions, and human–AI interaction and safety. Proposed for ICLR 2027 in San Francisco.">
   <meta property="og:title" content="Beyond the Clinic: AI for Patient-Driven Health">
-  <meta property="og:description" content="What must health AI get right when people collect, interpret, and act on their own data? Proposed workshop at ICLR 2027, San Francisco.">
+  <meta property="og:description" content="Learning from personal health data, adaptive interventions, and human–AI interaction and safety. Proposed workshop at ICLR 2027, San Francisco.">
   <meta property="og:image" content="https://beyond-the-clinic-workshop.github.io/img/sf-small.jpg">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +37,7 @@
 
   <!-- ============================== HERO ==============================
        Hero photo: img/sf.jpg (full-resolution original) on wide screens, img/sf-small.jpg (1600 px) on phones/tablets.
-       Until it exists, the hero falls back to a plain gradient. The text sits on a solid
+       Until it exists, the hero falls back to a plain gradient. The text sits on a frosted-glass
        panel so the photo itself needs no darkening overlay. -->
   <section class="hero" id="top">
     <div class="hero-inner">
@@ -46,13 +46,13 @@
       <h1>Beyond the Clinic</h1>
       <p class="subtitle">AI for Patient-Driven Health</p>
       <p class="tagline">
-        Patients are increasingly managing their health outside of the clinic, where AI now
-        interacts with people directly. We ask what health AI must get right when people collect,
-        interpret, and act on their own data.
+        AI models for personal health could bring continuous, individualized care to the large share
+        of health decisions made outside the clinic. The question is no longer whether AI will shape
+        how people manage their health, but whether it will do so well.
       </p>
       <ul class="hero-meta">
         <li>San Francisco</li>
-        <li>April 29&ndash;30, 2027 <span class="muted-light">(day TBA)</span></li>
+        <li>April 29 or 30, 2027</li>
         <li>In person</li>
       </ul>
       <div class="hero-actions">
@@ -69,70 +69,72 @@
     <section class="section" id="about">
       <div class="container">
         <p class="eyebrow">About</p>
-        <h2>Most health happens outside the clinic</h2>
+        <h2>Most health decisions happen outside the clinic</h2>
         <div class="prose">
           <p>
-            Health AI has largely been built around clinical workflows, which supply measurement
-            protocols, curated labels, and a professional who reviews outputs before anyone acts on
-            them. Yet most health is managed outside the clinic, where people increasingly collect
-            their own data, read their own records, and interpret results alone or with AI.
+            Sensors that continuously measure human physiology have become cheap enough to wear every
+            day, and AI models are increasingly capable of interpreting the data they collect.
+            Foundation models pretrained on physiological data from millions of individuals learn
+            representations that transfer across tasks and devices, and language-model agents can
+            interpret personal health records, answer health questions, support behavior change, and
+            hold diagnostic and disease-management conversations.
           </p>
           <p>
-            We call this <em>patient-driven health</em>: health decisions initiated and steered by the
-            individual, whether or not a clinician is involved. Foundation models are already trained
-            on wearable data from millions of individuals, and one chatbot fields health questions
-            from over 230 million people a week.
+            Turning these advances into better health outcomes requires more than accurate
+            predictions. Personal health data are often incomplete, fragmented across devices, and
+            collected without standardized protocols or reliable labels. A glucose alert may change
+            what someone eats, and a sleep recommendation may change how they exercise, so
+            interventions change the very data models learn from. And safety depends not only on
+            model accuracy but on how people interpret and act on AI recommendations over repeated
+            interactions.
           </p>
           <p>
-            This workshop asks what AI must get right in this setting, and how the data people
-            collect can in turn advance science where clinical research has lagged. Through a debate,
-            roundtables, and panels spanning AI, clinical, and patient perspectives, we aim to lay
-            methodological groundwork for health AI that people can safely act on.
+            Our mission is to bring together the research communities developing the methods needed
+            for safe and effective patient-driven health AI. Progress requires advances in machine
+            learning, causal inference, and human&ndash;AI interaction, informed by clinical expertise
+            and the experiences of patients themselves. This workshop provides a forum for discussion
+            across these disciplines, focused on three research directions.
           </p>
         </div>
 
         <dl class="stats">
           <div class="stat">
-            <dt>&lt;&thinsp;1 in 5</dt>
-            <dd>people in the US contact a physician in an average month</dd>
-            <dd class="cite">Johansen &amp; Richardson, 2019</dd>
-          </div>
-          <div class="stat">
-            <dt>~4 in 5</dt>
-            <dd>experience some discomfort, illness, or injury in that same month</dd>
-            <dd class="cite">Green et al., 2001</dd>
-          </div>
-          <div class="stat">
             <dt>1 in 3</dt>
-            <dd>US adults used AI for health information in the past year</dd>
+            <dd>US adults used AI for health information in the past year, many uploading their own test results</dd>
             <dd class="cite">KFF, 2026</dd>
           </div>
           <div class="stat">
-            <dt>0 of 1.6M</dt>
-            <dd>day-long wearable windows in one corpus were complete</dd>
-            <dd class="cite">Xu et al., 2025</dd>
+            <dt>1.7M</dt>
+            <dd>individuals&rsquo; data used to pretrain a single multimodal cardiac foundation model</dd>
+            <dd class="cite">Gu et al., 2026</dd>
+          </div>
+          <div class="stat">
+            <dt>2024</dt>
+            <dd>the first over-the-counter continuous glucose monitor was cleared in the US</dd>
+            <dd class="cite">U.S. FDA, 2024</dd>
           </div>
         </dl>
 
-        <h3 class="subhead">Three levels of patient-driven health</h3>
+        <h3 class="subhead">Three research directions</h3>
         <div class="levels">
           <article class="level">
             <span class="level-num">1</span>
-            <h4>Detect</h4>
-            <p>Spotting elevated risk or undiagnosed disease, such as glucose spikes into
-              prediabetic ranges in people whom standard tests classify as normal.</p>
+            <h4>Learning from heterogeneous personal health data</h4>
+            <p>Models that integrate wearables, laboratory results, clinical records, and
+              self-reported data, and combine population knowledge with an individual&rsquo;s own
+              history.</p>
           </article>
           <article class="level">
             <span class="level-num">2</span>
-            <h4>Manage</h4>
-            <p>Managing known risks and chronic conditions day to day, from diabetes to tracking
-              cycles to understand symptoms.</p>
+            <h4>Adaptive interventions and sequential decision-making</h4>
+            <p>Methods that personalize when and how to intervene, accounting for how each
+              intervention changes behavior, physiology, and the data that follow.</p>
           </article>
           <article class="level">
             <span class="level-num">3</span>
-            <h4>Improve</h4>
-            <p>Improving health and wellness without a known risk or condition, from sleep and
-              fitness to athletic performance.</p>
+            <h4>Human&ndash;AI interaction, evaluation, and safety</h4>
+            <p>How people understand and act on AI outputs, and evaluation that extends from model
+              responses to decisions and health outcomes.</p>
           </article>
         </div>
       </div>
@@ -142,110 +144,99 @@
     <section class="section section-tint" id="cfp">
       <div class="container">
         <p class="eyebrow">Call for papers</p>
-        <h2>Open problems</h2>
+        <h2>Research directions</h2>
         <p class="lead">
-          We invite submissions on methods, data, evaluation, and applications for AI that people use
-          to understand and act on their own health. Topics include, but are not limited to:
+          We invite papers across all three research directions. Key topics include, but are not
+          limited to:
         </p>
 
         <div class="topics">
           <article class="topic">
             <span class="topic-num">01</span>
-            <h3>Translating between population evidence and individual experience</h3>
-            <p class="topic-q">How should models weigh population evidence against a person&rsquo;s
-              own data, and how can personal data build new population evidence?</p>
+            <h3>Learning from heterogeneous personal health data</h3>
+            <p class="topic-q">Personal health records combine wearables, laboratory results, clinical
+              records, and self-reported information, collected at different times and without
+              standardized protocols. How can models integrate these sources and combine knowledge
+              learned across populations with evidence accumulated by an individual?</p>
             <ul>
-              <li>Adapting population knowledge to individuals</li>
-              <li>The reference class problem when individuals were not represented in the study population</li>
-              <li>Personalization from small samples and the risk of overfitting to the individual</li>
-              <li>N-of-1 designs and individual causal inference</li>
-              <li>Pooling patient-generated data to build new population evidence</li>
-              <li>Personal baselines that change over time: online and test-time adaptation</li>
+              <li><strong>Representation learning:</strong> Foundation models and self-supervised methods for longitudinal, multimodal personal health data, including learning with limited labels.</li>
+              <li><strong>Heterogeneous data integration:</strong> Methods for combining wearable signals, medical records, laboratory measurements, and self-reported data across different temporal resolutions.</li>
+              <li><strong>Learning from imperfect observations:</strong> Modeling informative missingness, selective recording, measurement noise, and changes in devices and sensors.</li>
+              <li><strong>Individualization and generalization:</strong> Combining population-level evidence with individual health histories; adapting models across patients, devices, and populations while accounting for uncertainty and bias.</li>
+              <li><strong>Learning without reliable ground truth:</strong> Evaluating personalized predictions with sparse labels, and using longitudinal observations to generate and test hypotheses about human physiology.</li>
             </ul>
           </article>
 
           <article class="topic">
             <span class="topic-num">02</span>
-            <h3>Learning from personal health data</h3>
-            <p class="topic-q">How can models learn reliably from data that are incomplete, noisy,
-              and self-selected?</p>
+            <h3>Adaptive interventions and sequential decision-making</h3>
+            <p class="topic-q">Unlike predictions, interventions change behavior and physiology, and with
+              them the data on which subsequent decisions are based. How can systems estimate the effects
+              of interventions, adapt to individuals over time, and keep learning safe and effective
+              after deployment?</p>
             <ul>
-              <li>Foundation models and self-supervised learning for wearable and multimodal data</li>
-              <li>Reasoning over heterogeneous personal records, from medical records to wearable and self-reported data</li>
-              <li>Learning without curated labels and evaluation without per-person ground truth</li>
-              <li>Informative missingness and measurement without protocol</li>
-              <li>Robustness to differences in devices, sensors, and firmware</li>
-              <li>Data self-selection and performance across subgroups</li>
+              <li><strong>Adaptive intervention policies:</strong> Reinforcement learning, contextual bandits, and other methods for personalizing the timing, content, and frequency of health interventions.</li>
+              <li><strong>Causal evaluation:</strong> Micro-randomized trials, N-of-1 experiments, off-policy evaluation, and counterfactual methods for estimating individual intervention effects.</li>
+              <li><strong>Learning under feedback:</strong> Methods that account for how recommendations change behavior, physiological measurements, and the data available for subsequent learning.</li>
+              <li><strong>Continual personalization:</strong> Online learning and adaptation as an individual&rsquo;s health, behavior, and response to interventions change over time.</li>
+              <li><strong>Long-term and safe optimization:</strong> Decision-making with delayed or imperfect outcomes, limited opportunities for exploration, and constraints on potentially harmful interventions.</li>
             </ul>
           </article>
 
           <article class="topic">
             <span class="topic-num">03</span>
-            <h3>Adaptive interventions and sequential decision-making</h3>
-            <p class="topic-q">How can systems learn to act for an individual safely and
-              effectively, when every intervention changes the behavior and data they learn from?</p>
+            <h3>Human&ndash;AI interaction, evaluation, and safety</h3>
+            <p class="topic-q">The effectiveness of personal health AI depends on how individuals
+              understand and act on its outputs. How should systems communicate uncertainty and support
+              decisions without routine clinical supervision, and how can evaluation extend to the
+              decisions people make with AI and their subsequent health outcomes?</p>
             <ul>
-              <li>Methods for adaptive and closed-loop interventions</li>
-              <li>Just-in-time adaptive interventions and micro-randomized trials</li>
-              <li>Feedback loops between interventions, behavior, and data</li>
-              <li>Off-policy and counterfactual evaluation of adaptive systems</li>
-              <li>Online personalization and test-time adaptation</li>
-              <li>Optimization with long-term, delayed, and proxy outcomes</li>
-              <li>Safe exploration and constrained decision-making</li>
-            </ul>
-          </article>
-
-          <article class="topic">
-            <span class="topic-num">04</span>
-            <h3>Human&ndash;AI interaction and safety</h3>
-            <p class="topic-q">How can AI help people understand and act on their health
-              information safely, without a professional in the loop?</p>
-            <ul>
-              <li>Evaluating LLMs&rsquo; ability to interpret and synthesize patient-provided records, lab results, and clinical notes</li>
-              <li>Uncertainty quantification and out-of-distribution detection for knowing when not to answer</li>
-              <li>Active information seeking in response to patient-driven prompting</li>
-              <li>Measuring and mitigating over-reliance on models and model sycophancy</li>
-              <li>Identifying and mitigating harmful outputs and misuse</li>
-              <li>Designing outputs robust to misinterpretation by non-experts</li>
-              <li>Patient privacy and data protection</li>
-              <li>Evaluating outcomes rather than outputs: human&ndash;AI team performance, user studies and trials, person-defined endpoints</li>
+              <li><strong>Uncertainty and information seeking:</strong> Identifying missing information, communicating uncertainty, abstaining when appropriate, and escalating decisions that require clinical input.</li>
+              <li><strong>Human&ndash;AI evaluation:</strong> Interactive benchmarks, longitudinal user studies, and prospective trials that assess joint decision-making and downstream health outcomes.</li>
+              <li><strong>Robustness and safety:</strong> Detecting and mitigating harmful advice, misleading premises, sycophancy, human misuse and abuse of AI models, and inappropriate reliance on model outputs.</li>
+              <li><strong>Responsible deployment:</strong> Privacy-preserving methods, equitable performance across patient populations, and continuous evaluation and monitoring after deployment.</li>
             </ul>
           </article>
         </div>
 
         <p class="callout">
-          We especially welcome submissions from application areas such as
-          <strong>women&rsquo;s health</strong>, <strong>mental health</strong>, and
-          <strong>sports performance</strong>.
+          We particularly encourage applications in <strong>women&rsquo;s health</strong>,
+          <strong>mental health</strong>, <strong>chronic condition management</strong>, and the
+          <strong>health of underserved populations</strong>.
         </p>
 
         <h3 class="subhead">Submission tracks</h3>
         <div class="tracks">
           <article class="track">
-            <p class="track-pages">Up to 2 pages</p>
-            <h4>Tiny papers</h4>
-            <p>Early findings and late-breaking developments that would benefit most from
-              discussion: a simple idea implemented and evaluated for the first time, a small
-              self-contained theoretical result, or a new perspective on an existing paper.</p>
-            <p class="track-note">The five top-rated tiny papers give three-minute lightning talks
-              before the first poster session.</p>
+            <p class="track-pages">Up to 8 pages</p>
+            <h4>Regular papers</h4>
+            <p>Original methodological research, empirical studies, benchmarks, and position papers
+              relevant to patient-driven health AI.</p>
           </article>
           <article class="track">
-            <p class="track-pages">Up to 4 pages</p>
-            <h4>Long papers</h4>
-            <p>More developed, unpublished work, such as new methods, datasets, benchmarks, or
-              empirical studies.</p>
-            <p class="track-note">Five are selected for five-minute spotlight talks before the
-              second poster session.</p>
+            <p class="track-pages">Up to 2 pages</p>
+            <h4>Tiny papers</h4>
+            <p>Early-stage research, preliminary findings, negative results, reanalyses, and new
+              research perspectives that would benefit from community feedback.</p>
+            <p class="track-note">Designed to lower the barrier for authors outside the machine
+              learning conference circuit, including clinicians, patient researchers, and digital
+              health researchers.</p>
           </article>
         </div>
 
         <ul class="policies">
-          <li>Submissions and reviewing run on <strong>OpenReview</strong> (link to be announced).</li>
-          <li>Work previously published at another venue, including the ICLR 2027 main track, will not be accepted.</li>
-          <li>Accepted papers will be hosted on OpenReview and on this website.</li>
-          <li>We follow the ICLR 2027 policies on large language model usage.</li>
-          <!-- TODO: state archival vs. non-archival once decided. -->
+          <li>Page limits exclude references. Submissions use the ICLR format and undergo double-blind
+            review on <strong>OpenReview</strong> (link to be announced).</li>
+          <li>Selected papers receive spotlight presentations and spotlight paper awards, announced in
+            the closing session. All accepted papers are presented in the poster sessions.</li>
+          <li>The workshop is <strong>non-archival</strong>, so authors can publish their work
+            elsewhere later. Accepted papers will be publicly available on OpenReview.</li>
+          <li>Papers already published at other machine learning conferences, including the ICLR main
+            track, will not be accepted.</li>
+          <li>We follow the ICLR 2027 policy on AI usage. AI tools may assist with research and
+            writing, subject to disclosure requirements, but AI systems will not serve as primary
+            authors or reviewers. AI-generated submissions are not accepted in the tiny papers
+            track.</li>
         </ul>
       </div>
     </section>
@@ -257,11 +248,12 @@
         <h2>Timeline</h2>
         <p class="muted">Tentative. All deadlines are Anywhere on Earth (AoE).</p>
         <ol class="timeline">
-          <li><time datetime="2026-12-15">15 Dec 2026</time><span>Call for papers opens</span></li>
-          <li class="key"><time datetime="2027-02-01">1 Feb 2027</time><span>Submission deadline</span></li>
-          <li><time datetime="2027-02-26">26 Feb 2027</time><span>Author notification; accepted papers public on OpenReview</span></li>
-          <li><time datetime="2027-03-10">10 Mar 2027</time><span>Camera-ready deadline and public program with talk titles</span></li>
-          <li class="key"><time datetime="2027-04-29">29&ndash;30 Apr 2027</time><span>Workshop in San Francisco (exact day TBA)</span></li>
+          <li><time datetime="2026-12-01">1 Dec 2026</time><span>Call for papers announced; submission site opens on OpenReview</span></li>
+          <li class="key"><time datetime="2027-02-01">1 Feb 2027</time><span>Paper submission deadline</span></li>
+          <li><time datetime="2027-02-22">22 Feb 2027</time><span>Author notifications</span></li>
+          <li><time datetime="2027-02-24">24 Feb 2027</time><span>Accepted papers public on OpenReview</span></li>
+          <li><time datetime="2027-03-10">10 Mar 2027</time><span>Camera-ready submissions; public program with talk titles</span></li>
+          <li class="key"><time datetime="2027-04-29">29 or 30 Apr 2027</time><span>Workshop at ICLR 2027, San Francisco</span></li>
         </ol>
       </div>
     </section>
@@ -272,33 +264,38 @@
         <p class="eyebrow">Program</p>
         <h2>An interactive day</h2>
         <p class="lead">
-          Beyond the invited talks, the day centers on roundtables, panels, and a debate, with
-          dedicated audience Q&amp;A in every session.
+          Patient-driven health spans communities that rarely share a venue: machine learning
+          researchers, clinicians, industry scientists, and patients. The program is built around
+          exchange rather than one-way presentation, with more time for panels, roundtables, and a
+          debate (140 minutes) than for invited talks (110 minutes, including Q&amp;A).
         </p>
 
         <div class="formats">
           <article class="format">
-            <h3>Roundtables</h3>
-            <p>Speakers, panelists, organizers, and attendees talk freely in small groups under the
-              <em>Chatham House Rule</em>. An organizer at each table collects the questions that drew
-              the most interest, and the moderators put the strongest ones to the stage, so a question
-              you would hesitate to ask in front of the full room can still be heard.</p>
+            <h3>Expert panels</h3>
+            <p>The morning panel pairs an industry AI leader, a physician-informatician, and a patient
+              advocate to discuss how each envisions AI supporting health decisions outside the
+              clinic. The afternoon panel brings together researchers translating wearable AI into
+              consumer products and elite sport. Both reserve time for audience questions.</p>
+          </article>
+          <article class="format">
+            <h3>Interactive roundtables</h3>
+            <p>Attendees, invited speakers, panelists, and organizers meet in small groups under the
+              <em>Chatham House Rule</em>. Tables have no fixed topics, so participants raise the
+              questions they find most pressing. Ideas from each table feed into the afternoon debate
+              and panel and are synthesized in the closing remarks.</p>
           </article>
           <article class="format">
             <h3>Live-vote debate</h3>
-            <p>Attendees vote for or against the motion from their phones before the opening
-              statements and can switch sides at any point. The running count stays on screen, and
-              the side that gains the most ground by the closing vote wins.</p>
+            <p><strong>Are wearable data clinically useful?</strong> An industry machine learning
+              scientist and a clinician-researcher argue opposing positions. Live vote counts stay on
+              screen throughout, so the room&rsquo;s reaction to each argument is visible in real time,
+              followed by open Q&amp;A.</p>
           </article>
           <article class="format">
-            <h3>Expert panels</h3>
-            <p>Panels bring ML developers, clinicians, and patient advocates into the same
-              conversation, each with dedicated audience Q&amp;A.</p>
-          </article>
-          <article class="format">
-            <h3>Talks into posters</h3>
-            <p>Contributed lightning and spotlight talks lead straight into the two poster sessions,
-              so discussion continues at the posters.</p>
+            <h3>Spotlights and posters</h3>
+            <p>Contributed work is featured through spotlight presentations, with awards for spotlight
+              papers, and two poster sessions that give authors extended time for discussion.</p>
           </article>
         </div>
 
@@ -313,105 +310,113 @@
                 <td>09:00&ndash;09:10</td>
                 <td>
                   <span class="session">Opening remarks</span>
-                  <span class="detail">Organizers</span>
+                  <span class="detail">Organizing committee</span>
                 </td>
               </tr>
               <tr>
                 <td>09:10&ndash;09:50</td>
                 <td>
-                  <span class="session">Panel discussion</span>
-                  <span class="detail">30 min moderated + 10 min audience Q&amp;A</span>
+                  <span class="session">Panel: Perspectives on real-world patient-driven health</span>
+                  <span class="detail">Moderated discussion and audience Q&amp;A</span>
                   <ul class="who">
-                    <li><strong>Ida Sim</strong> UCSF &middot; Clinician</li>
-                    <li><strong>Hugo Campos</strong> Research Partner &middot; Patient advocate</li>
-                    <li class="tba">ML developer to be announced</li>
+                    <li><strong>Karan Singhal</strong> OpenAI</li>
+                    <li><strong>Ida Sim</strong> UCSF</li>
+                    <li><strong>Hugo Campos</strong> Patient advocate</li>
                   </ul>
                 </td>
               </tr>
               <tr>
                 <td>09:50&ndash;10:25</td>
                 <td>
-                  <span class="session">Invited talk</span>
-                  <span class="detail">25 min + 10 min Q&amp;A</span>
+                  <span class="session">Invited talk I: Foundation models and large sensor data for personal health</span>
+                  <span class="detail">25-minute talk and 10-minute Q&amp;A</span>
                   <ul class="who">
-                    <li><strong>Yuzhe Yang</strong> UCLA &middot; Foundation models for wearable sensor data; AI biomarkers for disease</li>
+                    <li><strong>Yuzhe Yang</strong> UCLA</li>
                   </ul>
                 </td>
               </tr>
               <tr>
                 <td>10:25&ndash;10:40</td>
                 <td>
-                  <span class="session">Spotlight introductions: selected papers</span>
-                  <span class="detail">5 &times; 3 min; questions at the posters</span>
+                  <span class="session">Spotlight presentations</span>
+                  <span class="detail">Selected contributed papers; questions continue during the poster session</span>
                 </td>
               </tr>
               <tr class="break">
                 <td>10:40&ndash;11:40</td>
                 <td>
                   <span class="session">Coffee and poster session I</span>
-                  <span class="detail">Accepted papers</span>
+                  <span class="detail">Contributed research presentations and discussion</span>
                 </td>
               </tr>
               <tr>
                 <td>11:40&ndash;12:10</td>
                 <td>
-                  <span class="session">Roundtables: Real-world patient-driven health</span>
-                  <span class="detail">Speakers, panelists, organizers, and attendees; Chatham House Rule</span>
+                  <span class="session">Interactive roundtables</span>
+                  <span class="detail">Small-group discussions on research challenges in patient-driven health, with invited speakers, panelists, organizers, and attendees</span>
                 </td>
               </tr>
               <tr class="break">
                 <td>12:10&ndash;13:10</td>
                 <td>
                   <span class="session">Lunch</span>
+                  <span class="detail">Informal networking</span>
                 </td>
               </tr>
               <tr>
                 <td>13:10&ndash;13:40</td>
                 <td>
-                  <span class="session">Debate</span>
-                  <span class="detail">Audience votes live; 20 min debate + 10 min Q&amp;A</span>
+                  <span class="session">Interactive debate: Are wearable data clinically useful?</span>
+                  <span class="detail">Moderated debate, live audience voting, and Q&amp;A</span>
                   <ul class="who">
-                    <li><strong>Joe Futoma</strong> Oura &middot; Staff ML Data Scientist</li>
-                    <li><strong>Julian Hong</strong> UCSF &middot; Clinician</li>
+                    <li><strong>Joe Futoma</strong> Oura</li>
+                    <li><strong>Julian Hong</strong> UCSF</li>
                   </ul>
                 </td>
               </tr>
               <tr>
                 <td>13:40&ndash;14:15</td>
                 <td>
-                  <span class="session">Invited talk</span>
-                  <span class="detail">25 min + 10 min Q&amp;A</span>
+                  <span class="session">Invited talk II: Human&ndash;AI interaction and safety</span>
+                  <span class="detail">25-minute talk and 10-minute Q&amp;A</span>
                   <ul class="who">
-                    <li><strong>Deborah Raji</strong> UC Berkeley &middot; Health AI safety</li>
+                    <li><strong>Inioluwa Deborah Raji</strong> UC Berkeley, incoming Stanford</li>
                   </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>14:15&ndash;14:30</td>
+                <td>
+                  <span class="session">Spotlight presentations</span>
+                  <span class="detail">Selected contributed papers; questions continue during the poster session</span>
                 </td>
               </tr>
               <tr class="break">
-                <td>14:15&ndash;15:15</td>
+                <td>14:30&ndash;15:30</td>
                 <td>
                   <span class="session">Coffee and poster session II</span>
-                  <span class="detail">Accepted papers</span>
+                  <span class="detail">Contributed research presentations and discussion</span>
                 </td>
               </tr>
               <tr>
-                <td>15:15&ndash;15:55</td>
+                <td>15:30&ndash;16:10</td>
                 <td>
-                  <span class="session">Panel discussion</span>
-                  <span class="detail">30 min moderated + 10 min audience Q&amp;A</span>
+                  <span class="session">Panel: Personal wellness and athletic AI in practice</span>
+                  <span class="detail">Moderated discussion and audience Q&amp;A</span>
                   <ul class="who">
-                    <li><strong>Andy Miller</strong> Apple &middot; Research Scientist</li>
-                    <li><strong>Yojan Patel</strong> Google &middot; Research Lead</li>
-                    <li><strong>Matt Springham</strong> Google Health; Arsenal FC &middot; Physical performance</li>
+                    <li><strong>Andy Miller</strong> Apple</li>
+                    <li><strong>Yojan Patel</strong> Google</li>
+                    <li><strong>Matt Springham</strong> Google Health &middot; Arsenal FC</li>
                   </ul>
                 </td>
               </tr>
               <tr>
-                <td>15:55&ndash;16:35</td>
+                <td>16:10&ndash;16:50</td>
                 <td>
-                  <span class="session">Keynote talk</span>
-                  <span class="detail">30 min + 10 min Q&amp;A</span>
+                  <span class="session">Keynote: Adaptive interventions and sequential decision-making</span>
+                  <span class="detail">30-minute talk and 10-minute Q&amp;A</span>
                   <ul class="who">
-                    <li><strong>Susan Murphy</strong> Harvard University &middot; Adaptive interventions</li>
+                    <li><strong>Susan Murphy</strong> Harvard University</li>
                   </ul>
                 </td>
               </tr>
@@ -419,12 +424,20 @@
                 <td>16:50&ndash;17:00</td>
                 <td>
                   <span class="session">Awards and closing remarks</span>
-                  <span class="detail">Organizers</span>
+                  <span class="detail">Organizing committee; synthesis of workshop discussions and future research directions</span>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
+
+        <p class="callout">
+          <strong>Can&rsquo;t attend in person?</strong> Subject to speaker consent, invited talks will be
+          recorded and posted on this website. Accepted papers will be public on OpenReview, and authors
+          will be invited to share posters, slides, and short presentation videos online. Authors unable
+          to travel because of exceptional circumstances may present a prerecorded talk or a remotely
+          submitted poster where feasible.
+        </p>
       </div>
     </section>
 
@@ -434,68 +447,85 @@
     <section class="section" id="speakers">
       <div class="container">
         <p class="eyebrow">Speakers</p>
-        <h2>Invited speakers</h2>
+        <h2>Invited speakers and keynote</h2>
         <div class="people">
           <article class="person">
-            <div class="avatar">YY</div>
-            <h3>Yuzhe Yang</h3>
-            <p class="affil">UCLA</p>
-            <p class="area">Foundation models for wearable sensor data; AI biomarkers for disease</p>
-          </article>
-          <article class="person">
             <div class="avatar">SM</div>
+            <p class="role">Keynote</p>
             <h3>Susan Murphy</h3>
             <p class="affil">Harvard University</p>
-            <p class="area">Adaptive interventions</p>
+            <p class="area">Statistical reinforcement learning and adaptive interventions</p>
+          </article>
+          <article class="person">
+            <div class="avatar">YY</div>
+            <p class="role">Invited talk</p>
+            <h3>Yuzhe Yang</h3>
+            <p class="affil">UCLA</p>
+            <p class="area">Wearable foundation models and AI-based disease biomarkers</p>
           </article>
           <article class="person">
             <div class="avatar">DR</div>
-            <h3>Deborah Raji</h3>
-            <p class="affil">UC Berkeley</p>
-            <p class="area">Health AI safety</p>
+            <p class="role">Invited talk</p>
+            <h3>Inioluwa Deborah Raji</h3>
+            <p class="affil">UC Berkeley &middot; incoming Stanford</p>
+            <p class="area">AI auditing, evaluation, and accountability</p>
           </article>
         </div>
 
-        <h2 class="h2-follow">Panelists and debaters</h2>
+        <h2 class="h2-follow">Panelists and debate participants</h2>
         <div class="people">
           <article class="person">
+            <div class="avatar">KS</div>
+            <p class="role">Panelist</p>
+            <h3>Karan Singhal</h3>
+            <p class="affil">OpenAI</p>
+            <p class="area">Head of Health AI</p>
+          </article>
+          <article class="person">
             <div class="avatar">IS</div>
+            <p class="role">Panelist</p>
             <h3>Ida Sim</h3>
             <p class="affil">UCSF</p>
-            <p class="area">Clinician</p>
+            <p class="area">Physician and informatics researcher</p>
           </article>
           <article class="person">
             <div class="avatar">HC</div>
+            <p class="role">Panelist</p>
             <h3>Hugo Campos</h3>
             <p class="affil">Research Partner</p>
             <p class="area">Patient advocate</p>
           </article>
           <article class="person">
             <div class="avatar">JF</div>
+            <p class="role">Debate</p>
             <h3>Joe Futoma</h3>
             <p class="affil">Oura</p>
-            <p class="area">Staff ML Data Scientist</p>
+            <p class="area">Staff Machine Learning Data Scientist</p>
           </article>
           <article class="person">
             <div class="avatar">JH</div>
+            <p class="role">Debate</p>
             <h3>Julian Hong</h3>
             <p class="affil">UCSF</p>
-            <p class="area">Clinician</p>
+            <p class="area">Associate Professor of Radiation Oncology</p>
           </article>
           <article class="person">
             <div class="avatar">AM</div>
+            <p class="role">Panelist</p>
             <h3>Andy Miller</h3>
             <p class="affil">Apple</p>
-            <p class="area">Research Scientist</p>
+            <p class="area">Physiological sensing and wearable health data</p>
           </article>
           <article class="person">
             <div class="avatar">YP</div>
+            <p class="role">Panelist</p>
             <h3>Yojan Patel</h3>
             <p class="affil">Google</p>
-            <p class="area">Research Lead</p>
+            <p class="area">AI for personal health and wearable sensing</p>
           </article>
           <article class="person">
             <div class="avatar">MS</div>
+            <p class="role">Panelist</p>
             <h3>Matt Springham</h3>
             <p class="affil">Google Health &middot; Arsenal FC</p>
             <p class="area">Physical performance</p>
@@ -510,41 +540,53 @@
       <div class="container">
         <p class="eyebrow">Organizers</p>
         <h2>Organizing committee</h2>
-        <div class="people">
+        <p class="lead">
+          Researchers from UC Berkeley, UCSF, Duke University, the University of Oxford, Columbia
+          University, and Google, spanning foundation models for physiological data, clinical machine
+          learning, adaptive interventions, and human&ndash;AI interaction.
+        </p>
+        <div class="people people-follow">
           <article class="person">
             <div class="avatar">HL</div>
             <h3>Hongzhou Luan</h3>
             <p class="affil">UC Berkeley &amp; UCSF</p>
+            <p class="area">PhD candidate, Computational Precision Health</p>
           </article>
           <article class="person">
             <div class="avatar">AS</div>
             <h3>Alexander Schubert</h3>
             <p class="affil">UC Berkeley &amp; UCSF</p>
+            <p class="area">PhD candidate, Computational Precision Health</p>
           </article>
           <article class="person">
             <div class="avatar">JF</div>
             <h3>Jenna Fields</h3>
             <p class="affil">UC Berkeley &amp; UCSF</p>
+            <p class="area">PhD student, Computational Precision Health</p>
           </article>
           <article class="person">
             <div class="avatar">KV</div>
-            <h3>Katarina Vukosavljevich</h3>
+            <h3>Katarina Vukosavljevi&cacute;</h3>
             <p class="affil">University of Oxford</p>
+            <p class="area">DPhil student, Health Data Science</p>
           </article>
           <article class="person">
             <div class="avatar">LH</div>
             <h3>Leeor Hershkovich</h3>
             <p class="affil">Duke University</p>
+            <p class="area">PhD candidate, Biomedical Engineering</p>
           </article>
           <article class="person">
             <div class="avatar">OX</div>
-            <h3>Orson Xu</h3>
-            <p class="affil">Columbia University</p>
+            <h3>Xuhai (Orson) Xu</h3>
+            <p class="affil">Columbia University &amp; Google</p>
+            <p class="area">Assistant Professor of Biomedical Informatics</p>
           </article>
           <article class="person">
             <div class="avatar">MX</div>
-            <h3>Maxwell Xu</h3>
+            <h3>Maxwell A. Xu</h3>
             <p class="affil">Google</p>
+            <p class="area">Research Scientist, Google Health</p>
           </article>
         </div>
 
